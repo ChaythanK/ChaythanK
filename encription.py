@@ -7,7 +7,6 @@ cipher_text = ''
 li=[]
 
 
-
 def ceaser(text1,shift1):
     global cipher_text
     alphabet=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
@@ -28,6 +27,3 @@ with open(text, 'r') as file:
         ceaser(line, shift)
 with open(text,'w') as file:
     file.write(cipher_text)
-
-
-    
