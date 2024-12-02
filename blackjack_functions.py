@@ -133,7 +133,7 @@ def player_hit():
         player_count += card_values[A]
         
         if player_count > 21:
-            if ce in player_cards and card_values[ace]==11:
+            if ce in player_cards and card_values["ace"]==11:
                 player_count-=10
             elif game != "over":
                 print("GAME OVER")
@@ -149,7 +149,7 @@ def player_hit():
             else:
                 print("hurray!!!!!")
                 print("YOU WON!!")
-            
+
 
 def print_card(card_list):
     for card in card_list:
@@ -176,23 +176,3 @@ while j=="yes" or j=="ye" or j=="y" or j=="sure;":
     j=str(input("do you want to continue(yes/no)")).strip().lower()
 print("see u later")
 exit(0)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

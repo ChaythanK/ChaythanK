@@ -16,8 +16,8 @@ operation = {
     '/': divide,
 }
 
-num1=int(input("first number"))
-num2=int(input("second number"))
+num1=float(input("first number"))
+num2=float(input("second number"))
 for i in operation:
     print(i)
 a=(input("pick an operator from the line above"))
@@ -29,11 +29,12 @@ ye='yes'
 while ye=='yes':
     ye=str(input("do you want to continue??????"))
     if ye.lower()=="yes":
-        num3=int(input("next number-"))
+        num4 = answer
+        num3=float(input("next number-"))
         a=(input("pick an operator"))
         calculation_function=operation[a]
         answer=calculation_function(answer,num3)
-        print(answer)
+        print(f"{num4}{a}{num2} = {answer}")
     elif ye.lower().strip()=="no":
-        print("OK BYE, PRESS ENTER TO LEAVE")
+        print("OK BYE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
         exit(0)

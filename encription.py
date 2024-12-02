@@ -1,29 +1,22 @@
-print("welcome to ceaser cypher")
-direction=str(input("type 'encode' to encrypt and 'decode' to decrypt"))
-pext=(str(input("type the file directory you want to encode or decode"))).lower()
-text=pext.strip(' ')
-shift=int(input("enter the shift number"))
-cipher_text = ''
-li=[]
+# text = str(input("enter text: "))
+# shift = str(input("enter shift: "))
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','~','`','1','2','3','4','5',
+#             '6','7','8','9','0','!','@','#','$','%','^','&','*','(',')','-','_','+','=','{','[','}',']','|',':',';',"'",'"','<',',',".",'>','?','/',' ','a', 'b', 'c', 'd'
+#             ,'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','~','`','1','2','3','4','5','6','7','8','9','0','!','@'
+#             ,'#','$','%','^','&','*','(',')','-','_','+','=','{','[','}',']','|',':',';',"'",'"','<',',',".",'>','?','/']
+# text_in_list = [letter for letter in text]
+# print(text_in_list)
+# text_in_list = ["a" if letter == "e" else alphabet[alphabet.index(letter) + int(shift)] for letter in text_in_list if letter in alphabet]
+# print(text_in_list)
 
 
-def ceaser(text1,shift1):
-    global cipher_text
-    alphabet=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-    for letter in text1:
-        if letter in alphabet:
-            alphabet_index=alphabet.index(letter)
-            if direction == "encode":
-                new_alphabet=(alphabet_index+shift1)%26
-            elif direction == "decode":
-                new_alphabet = (alphabet_index-shift1)%26
-            a=alphabet[new_alphabet]
-            cipher_text+=a
-        else:
-            cipher_text+=letter
-    return cipher_text
-with open(text, 'r') as file:
-    for line in file:
-        ceaser(line, shift)
-with open(text,'w') as file:
-    file.write(cipher_text)
+
+print('WELCOME!!')
+print('to the famous card game...')
+print("OLIGARCHY")
+#1 spade - bravery, wisdom, nobility
+#2 heart - love clergy
+#3 diamond - wealth merchants
+#4 clubs - hard work, peasants
+deck = ["1","2","3","4","5","6","7","8","9","10","J","Q","K"]
+print('')
