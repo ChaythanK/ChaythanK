@@ -1,3 +1,8 @@
+"""
+Chemical reactions will happen in this file.
+
+"""
+#below I have made dictionaries of all the groups of elements and their
 alkali_metals = {
     "Lithium": (3, 7),
     "Sodium": (11, 23),
@@ -215,7 +220,11 @@ def ionic_bond(element1, element2):
     else:
         print('sad its not there')
 
+print("<")
 
+print("^")
+
+print("")
 
 
 valence_electrons('carbon')
