@@ -1,40 +1,38 @@
-def add(n1,n2):
-    return n1+n2
+import turtle
+from tkinter import*
+FONT_NAME = "Comic Sans MS"
 
-def subtract(n1,n2):
-    return n1-n2
 
-def divide(n1,n2):
-    return n1/n2
+canvas.config()
 
-def multiply(n1,n2):
-    return n1*n2
-operation = {
-    '+': add,
-    '-': subtract,
-    '*': multiply,
-    '/': divide,
-}
+def if_pressed():
+    print("has been pressed")
+    canvas.config(width=1500, height=900)
+    canvas.coords(img,750, 450,)
+    canvas.delete(text)
+    button.destroy()
+    canvas.new_image = PhotoImage(file="night_sky.png")
+    canvas.itemconfig(img, image=canvas.new_image)
+    window.config(bg="black")
+    canvas.config(bg="black")
+    with open('Shark tank speech text', 'r') as file:
+        for line in file:
+            if "header" in line:  # Check if "header" exists in the line
+                print(line)
+                header = ""
+                for word in line.split():
+                    if word != "header":
+                        header +=word
+                print(header)
 
-num1=float(input("first number"))
-num2=float(input("second number"))
-for i in operation:
-    print(i)
-a=(input("pick an operator from the line above"))
-calculation_function=operation[a]
-answer=calculation_function(num1,num2)
-print(f"{num1}{a}{num2} = {answer}")
+            if "b"==line[0] and "o"==line[1] and "d"==line[2]:
+                print(line)
 
-ye='yes'
-while ye=='yes':
-    ye=str(input("do you want to continue??????"))
-    if ye.lower()=="yes":
-        num4 = answer
-        num3=float(input("next number-"))
-        a=(input("pick an operator"))
-        calculation_function=operation[a]
-        answer=calculation_function(answer,num3)
-        print(f"{num4}{a}{num2} = {answer}")
-    elif ye.lower().strip()=="no":
-        print("OK BYE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
-        exit(0)
+    canvas.create_text(750, 100, text=str(header), fill="white", font=(FONT_NAME, 50,))
+
+
+
+button = Button(text="next",fg="white", bg="dark blue", font = ("Comic Sans MS",15, "bold"), command= if_pressed)
+button.grid(column = 2, row = 3)
+
+window.mainloop()
