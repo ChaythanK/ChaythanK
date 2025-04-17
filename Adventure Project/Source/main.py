@@ -1,7 +1,5 @@
-from tkinter import *
-window = Tk()
-window.title("Widget Examples")
-window.minsize(width=500, height=500)
-window.configure(bg="lightblue")
-
-window.mainloop()
+import turtle
+screen = turtle.Screen()
+t = turtle.Turtle()
+t.pensize(10)
+screen.mainloop()
